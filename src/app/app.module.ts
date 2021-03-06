@@ -1,0 +1,55 @@
+import { HttpClientModule } from '@angular/common/http';
+import 'materialize-css';
+import { MaterializeModule } from "angular2-materialize";
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { BrowserModule } from '@angular/platform-browser';
+import  { MatToolbarModule } from '@angular/material/toolbar';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+
+import { AppComponent } from './app.component';
+import { FooterComponent } from './footer/footer.component';
+import { JobCardComponent } from './job-card/job-card.component';
+import { JobSearchItemComponent } from './job-search-item/job-search-item.component';
+import { SearchBarComponent } from './search-bar/search-bar.component';
+import { JobServiceService } from './job-service.service';
+import { LoginComponent } from './login/login.component';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { ProtectedComponent } from './protected/protected.component';
+import { AppRoutingModule } from './app-routing.module';
+import { FavouriteComponent } from './favourite/favourite.component';
+import { ProfileComponent } from './profile/profile.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    SearchBarComponent,
+    JobCardComponent,
+    FooterComponent,
+    JobSearchItemComponent,
+    LoginComponent,
+    MainNavComponent,
+    RegistrationComponent,
+    ProtectedComponent,
+    FavouriteComponent,
+    ProfileComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    MaterializeModule,
+    MatToolbarModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule
+
+  ],
+  providers: [JobServiceService],
+  bootstrap: [AppComponent]
+})
+export class AppModule {}
