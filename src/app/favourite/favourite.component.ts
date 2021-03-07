@@ -67,6 +67,18 @@ export class FavouriteComponent implements OnInit {
   animationDelay = () => ({
     "animation-delay": `${this.index * 0.15}s`
   });
+
+
+deleteFavorite(id: string): boolean {
+  this.http.post("http://localhost:8081/favorites/jobs/delete",
+    {
+      "jobid": id,
+      "userid": this.userId
+    })
+    .subscribe((data) => console.log("deleted: ", data))
+    window.location.href="/favourites";
+  return true;
+}
 }
 
 // this.jobs = data, console.log("showFavorite()", data)

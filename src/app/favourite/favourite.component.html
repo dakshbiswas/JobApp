@@ -12,7 +12,7 @@
 
                 <div class="row">
                     <!-- <button type="button" (click)="animationDelay()" routerLink="/reload" class="del-btn">Delete</button> -->
-                    <button mat-raised-button color="accent" type="button" routerLink="/reload" class="del-btn">Delete</button>
+                    <button mat-raised-button color="accent" type="button" (click)="deleteFavorite(job['id'])" class="del-btn">Delete</button>
                     <br>
                   </div>
             </div>
