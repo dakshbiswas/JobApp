@@ -10,32 +10,32 @@
       <div class="form-group">
         <label for="firstName">First Name</label>
 
-        <input class="form-control" [(ngModel)]="newUser.firstName" id="firstName" name="firstName">
+        <input class="form-control" required [(ngModel)]="newUser.firstName" id="firstName" name="firstName">
 
       </div>
 
       <div class="form-group">
         <label for="lastName">Last Name</label>
 
-        <input class="form-control" [(ngModel)]="newUser.lastName" id="lastName" name="lastName">
+        <input class="form-control" required [(ngModel)]="newUser.lastName" id="lastName" name="lastName">
 
       </div>
       <div class="form-group">
         <label for="userId">User ID</label>
 
-        <input pattern="email" required  class="form-control" [(ngModel)]="newUser.userId" id="userId" name="userId">
+        <input type="email" required  class="form-control" [(ngModel)]="newUser.userId" id="userId" name="userId">
 
       </div>
       <div class="form-group">
         <label for="password">Password</label>
 
-        <input type="password" [(ngModel)]="newUser.password" class="form-control" id="password" name="password">
+        <input type="password" required [(ngModel)]="newUser.password" class="form-control" id="password" name="password">
 
       </div>
       <div class="form-group">
         <label class="form-label" for="customFile">User Profile Image</label>
         <br>
-        <input type="file" (change)="onFileSelected($event)" value="upload" class="form-control" id="customFile" />
+        <input type="file" required (change)="onFileSelected($event)" value="upload" class="form-control" id="customFile" />
       </div>
       <br>
       <div class="row">

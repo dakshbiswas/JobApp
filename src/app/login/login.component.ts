@@ -27,9 +27,7 @@ export class LoginComponent implements OnInit {
         this.authService.setImageUrl(data['imageUrl']);
         this.authService.setLname(data['Lname']);
         console.log(localStorage.getItem(TOKEN_NAME));
-       
-      //  this.router.navigate(['/players/search']);
-      //this.router.navigate(['/protected']);
+        alert("Successfully Logged In");
       window.location.href="/protected";
       }
       
@@ -38,8 +36,5 @@ export class LoginComponent implements OnInit {
       alert("wrong credential");
     }
     );
-  }
-  goToRegistration(){
-    this.router.navigate(['/registration']);
   }
 }
